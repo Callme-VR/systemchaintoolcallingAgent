@@ -16,7 +16,7 @@ langchain-groq
 langchain-huggingface
 langchain-mistralai
 langchain-text-splitters
-
+langchain-tavily
 huggingface_hub
 transformers
 sentence-transformers
