@@ -13,6 +13,7 @@ Fixes vs. original:
   tools, plus emoji icons for weather conditions, news, and approvals.
 """
 
+
 from dotenv import load_dotenv
 load_dotenv()
 
