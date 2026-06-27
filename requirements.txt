@@ -1,12 +1,10 @@
-# mostly used dependencies to build the ai agents
-
-
-
+# Core LLM Clients
 openai
 groq
 google-generativeai
 mistralai
 
+# LangChain Ecosystem
 langchain
 langchain-core
 langchain-community
@@ -16,60 +14,69 @@ langchain-groq
 langchain-huggingface
 langchain-mistralai
 langchain-text-splitters
-langchain-tavily
-huggingface_hub
+
+# LangGraph — Agent Workflows & State Management
+langgraph
+langgraph-checkpoint
+langgraph-checkpoint-sqlite
+langgraph-sdk
+
+# LangGraph Adapters (optional but common)
+langchain-anthropic
+langchain-cohere
+
+# Hugging Face
+huggingface-hub
 transformers
 sentence-transformers
 
+# Vector Stores
 faiss-cpu
 chromadb
 
+# Tokenization
 tiktoken
 
+# Configuration & Validation
 python-dotenv
 pydantic
 pydantic-settings
 
+# API Framework
 fastapi
 uvicorn
 
+# HTTP Clients
 requests
 httpx
 
+# Data Processing
 numpy
 pandas
 tqdm
 
+# Document Parsing
 pypdf
 python-docx
 unstructured
 
+# ML / Deep Learning
 torch
 accelerate
 
+# UI & Async
 streamlit
-langchain
-langchain-core
-langchain-mistralai
-pydantic
-python-dotenv
-mcp-agent
-openai
 asyncio
 
-streamlit
-mcp-agent
-google-generativeai
+# Web Scraping
 playwright
 
+# MCP (Model Context Protocol)
+mcp-agent
 
+# Additional Utilities for Agents
+# (Optional but frequently used with LangGraph)
 
-
-
-
-
-
-# uv venv
-# .venv\Scripts\activate
-# source .venv/bin/activate
-# uv pip install -r requirements.txt
+langsmith         
+tenacity        
+jsonschema         

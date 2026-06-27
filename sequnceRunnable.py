@@ -18,7 +18,7 @@ model=ChatMistralAI(
      model_name="mistral-small-latest"
 )
 
-# output parser
+# output parser 
 
 output_parsers=StrOutputParser()
 
