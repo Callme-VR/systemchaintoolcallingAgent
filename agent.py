@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-import requests
 from langchain_mistralai import ChatMistralAI
 from langchain_core.messages import HumanMessage
 from langchain.tools import tool
@@ -18,24 +17,6 @@ from tavily import TavilyClient
 # ============================================================
 # Tools
 # ============================================================
-
-@tool
-def get_weather(city: str) -> str:
-    """Get the current weather for a city in India."""
-    api_key = os.getenv("WEATHER_API_KEY")
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city},IN&appid={api_key}&units=metric"
-    try:
-        data = requests.get(url, timeout=10).json()
-    except requests.RequestException as e:
-        return f"error: could not reach weather API ({e})"
-
-    if str(data.get("cod")) != "200":
-        return f"error: {data.get('message', 'could not fetch weather')}"
-
-    temp = data["main"]["temp"]
-    desc = data["weather"][0]["description"]
-    return f"{city}: {temp}°C, {desc}"
-
 
 @tool
 def get_news(city: str) -> str:

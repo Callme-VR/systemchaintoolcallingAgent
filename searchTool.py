@@ -31,7 +31,7 @@ news_result = search_tool.invoke(query)
 
 # pull just the text content, drop urls/scores/metadata
 combined_content = "\n\n".join(item["content"] for item in news_result)
-
+         
 result = chain.invoke({"content": combined_content})
 
 print(result)
